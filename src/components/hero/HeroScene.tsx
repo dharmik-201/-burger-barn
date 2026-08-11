@@ -118,11 +118,12 @@ function MouseRig({ children }: { children: React.ReactNode }) {
 
 export default function HeroScene() {
   return (
-    <Canvas shadows camera={{ position: [0, 0.6, 7.2], fov: 42 }} dpr={[1, 1.8]}>
+    <Canvas shadows camera={{ position: [0, 0.6, 13], fov: 40 }} dpr={[1, 1.8]}>
       <ambientLight intensity={0.7} />
       <directionalLight position={[4, 6, 4]} intensity={2.1} castShadow />
       <directionalLight position={[-5, 2, -3]} intensity={0.7} color="#ffd9a1" />
       <MouseRig>
+       <group scale={0.9}>
         <Float speed={1.5} rotationIntensity={0.25} floatIntensity={0.7}>
           <group position={[-1.55, -0.2, 0]}>
             <Burger />
@@ -139,8 +140,9 @@ export default function HeroScene() {
             <Fry position={[0.3, -0.2, 0.2]} rotation={[-0.3, 0, -0.4]} />
           </group>
         </Float>
+       </group>
       </MouseRig>
-      <ContactShadows position={[0, -2.15, 0]} opacity={0.35} scale={12} blur={2.6} far={5} color="#5b2018" />
+      <ContactShadows position={[0, -2.6, 0]} opacity={0.28} scale={10} blur={3} far={5} color="#5b2018" />
     </Canvas>
   );
 }
