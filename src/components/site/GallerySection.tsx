@@ -2,20 +2,22 @@ import { useQuery } from "@tanstack/react-query";
 import { motion } from "motion/react";
 import { fetchGalleryImages } from "@/lib/gallery";
 import { SectionHeading } from "./SectionHeading";
-import storefront from "@/assets/unnamed_3.webp.asset.json";
-import interiorA from "@/assets/unnamed_4.webp.asset.json";
-import interiorB from "@/assets/unnamed_12.jpg.asset.json";
-import guests from "@/assets/download.jpg.asset.json";
-import guests2 from "@/assets/download_1.jpg.asset.json";
-import counter from "@/assets/unnamed_5.webp.asset.json";
+import {
+  unnamed_3_webp as storefront,
+  unnamed_4_webp as interiorA,
+  unnamed_12_jpg as interiorB,
+  download_jpg as guests,
+  download_1_jpg as guests2,
+  unnamed_5_webp as counter,
+} from "@/lib/assets";
 
 const fallback = [
-  { url: storefront.url, caption: "The Thicksip storefront, lit up after dark" },
-  { url: interiorA.url, caption: "Cosy corner seating" },
-  { url: counter.url, caption: "Fresh off the counter" },
-  { url: interiorB.url, caption: "Room for the whole gang" },
-  { url: guests.url, caption: "Cold coffee o'clock" },
-  { url: guests2.url, caption: "Good food, better company" },
+  { url: storefront, caption: "The Thicksip storefront, lit up after dark" },
+  { url: interiorA, caption: "Cosy corner seating" },
+  { url: counter, caption: "Fresh off the counter" },
+  { url: interiorB, caption: "Room for the whole gang" },
+  { url: guests, caption: "Cold coffee o'clock" },
+  { url: guests2, caption: "Good food, better company" },
 ];
 
 export function GallerySection() {

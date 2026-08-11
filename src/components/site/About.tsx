@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
-import interior from "@/assets/unnamed.webp.asset.json";
-import counter from "@/assets/unnamed_5.webp.asset.json";
+import { unnamed_webp as interiorUrl, unnamed_5_webp as counterUrl } from "@/lib/assets";
 
 export function About() {
   return (
@@ -41,13 +40,13 @@ export function About() {
           className="grid grid-cols-2 gap-4"
         >
           <img
-            src={interior.url}
+            src={interiorUrl}
             alt="Thicksip Cafe seating area with blue walls and cane chairs"
             loading="lazy"
             className="col-span-2 h-56 w-full rounded-2xl object-cover shadow-[var(--shadow-soft)]"
           />
           <img
-            src={counter.url}
+            src={counterUrl}
             alt="Thicksip Cafe order counter"
             loading="lazy"
             className="h-44 w-full rounded-2xl object-cover shadow-[var(--shadow-soft)]"
