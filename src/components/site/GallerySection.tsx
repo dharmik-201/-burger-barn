@@ -5,9 +5,9 @@ import { SectionHeading } from "./SectionHeading";
 import {
   unnamed_3_webp as storefront,
   unnamed_4_webp as interiorA,
-  unnamed_12_jpg as interiorB,
-  download_jpg as guests,
-  download_1_jpg as guests2,
+  interior_seating_jpg as interiorB,
+  guests_coldcoffee_jpg as guests,
+  guests_family_jpg as guests2,
   unnamed_5_webp as counter,
 } from "@/lib/assets";
 
