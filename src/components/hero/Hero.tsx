@@ -18,7 +18,7 @@ const rise: Variants = {
   show: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.9, ease: EASE } },
 };
 
-const letters = "BURGERBARN".split("");
+const letters = "BURGER BARN".split("");
 
 const marqueeItems = [
   "Thick Shakes",
@@ -67,20 +67,23 @@ export function Hero() {
 
           {/* stylized wordmark */}
           <motion.div variants={rise} className="mt-7">
-            <div className="flex select-none justify-center gap-[0.02em] lg:justify-start">
+            <div className="flex select-none flex-wrap items-end justify-center gap-[0.02em] lg:justify-start">
               {letters.map((ch, i) => (
                 <motion.span
                   key={`${ch}-${i}`}
                   initial={{ opacity: 0, y: 36, rotate: -6 }}
                   animate={{ opacity: 1, y: 0, rotate: 0 }}
                   transition={{ duration: 1, ease: EASE, delay: 0.25 + i * 0.055 }}
-                   className={`font-display text-[12vw] leading-[0.8] sm:text-6xl lg:text-[5rem] ${
+                   className={`font-display text-[10vw] leading-[0.8] sm:text-6xl lg:text-[4.7rem] ${
                     i % 2 === 0 ? "text-gradient-crimson" : "text-outline-crimson"
                   }`}
                 >
                   {ch}
                 </motion.span>
               ))}
+              <span className="ml-2 rounded-sm bg-primary px-2 py-1 font-sans text-[10px] font-bold uppercase leading-none text-primary-foreground sm:mb-1">
+                Demo
+              </span>
             </div>
           </motion.div>
 
