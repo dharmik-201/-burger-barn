@@ -13,11 +13,13 @@ export const Route = createFileRoute("/admin")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Owner Dashboard — Thicksip Cafe" },
-      { name: "description", content: "Private dashboard for managing Thicksip Cafe gallery and menu images." },
+      { title: "Owner Dashboard — Burger Barn Demo" },
+      { name: "description", content: "Private dashboard for managing Burger Barn demo gallery and menu images." },
       { name: "robots", content: "noindex, nofollow" },
-      { property: "og:title", content: "Owner Dashboard — Thicksip Cafe" },
-      { property: "og:description", content: "Private dashboard for Thicksip Cafe staff." },
+      { property: "og:title", content: "Owner Dashboard — Burger Barn Demo" },
+      { property: "og:description", content: "Private dashboard for the fictional Burger Barn demo." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: AdminPage,

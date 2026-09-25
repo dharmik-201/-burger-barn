@@ -4,22 +4,22 @@ import { SectionHeading } from "./SectionHeading";
 const reviews = [
   {
     quote:
-      "The Mojito is absolutely incredible and so refreshing! A perfect drink to pair with their food. 😍",
-    name: "Pandey Hritvik",
+      "The citrus cooler was bright and refreshing, and the crispy fries made the whole meal feel like a treat.",
+    name: "Avery Lane",
   },
   {
-    quote: "Amazing food and a fantastic atmosphere! Definitely my new favorite spot to hang out with friends.",
-    name: "Vakharia Naisargi",
-  },
-  {
-    quote:
-      "The best place to hang out! After trying cold coffee at so many other places, Thicksip's cold coffee is officially my absolute favorite. A must-visit!",
-    name: "Payal Rathod",
+    quote: "A playful menu, generous portions, and a relaxed diner mood. The smoky garden burger was my favourite.",
+    name: "Milo Hart",
   },
   {
     quote:
-      "Excellent service and highly attentive staff! They ensured we had a great time enjoying our premium burgers and shakes.",
-    name: "Patel Mann",
+      "The chocolate shake was wonderfully thick without being too sweet. I would pair it with the loaded fries again.",
+    name: "Tessa Bloom",
+  },
+  {
+    quote:
+      "Everything arrived hot, colourful, and thoughtfully presented. It is exactly the kind of cheerful burger experience I enjoy.",
+    name: "Rowan Vale",
   },
 ];
 
@@ -27,7 +27,7 @@ export function Testimonials() {
   return (
     <section id="reviews" className="py-24" style={{ background: "var(--gradient-warm)" }}>
       <div className="mx-auto max-w-6xl px-5">
-        <SectionHeading eyebrow="Loved in Kalol" title="What People Say" />
+        <SectionHeading eyebrow="Fictional Sample Reviews" title="What People Say" />
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           {reviews.map((r, i) => (
             <motion.figure

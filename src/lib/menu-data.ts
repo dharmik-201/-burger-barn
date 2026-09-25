@@ -10,7 +10,7 @@ export const menuGroups: MenuGroup[] = [
       { name: "Aloo Tikki Burger", price: 70 },
       { name: "Cheese Burger", price: 90 },
       { name: "Paneer Burger", price: 110 },
-      { name: "Thicksip Special Burger", price: 140 },
+      { name: "Burger Barn Special", price: 140 },
       { name: "Double Decker Cheese Burger", price: 170 },
     ],
   },
