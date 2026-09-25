@@ -18,7 +18,7 @@ const rise: Variants = {
   show: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.9, ease: EASE } },
 };
 
-const letters = "THICKSIP".split("");
+const letters = "BURGER BARN".split("");
 
 const marqueeItems = [
   "Thick Shakes",
@@ -26,7 +26,7 @@ const marqueeItems = [
   "Loaded Fries",
   "Mojitos",
   "Late Night Vibes",
-  "Kalol · Gujarat",
+  "Fictional Demo",
 ];
 
 export function Hero() {
@@ -62,25 +62,28 @@ export function Hero() {
             className="glass-panel inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.28em] text-primary"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            Kalol · Burgers · Thickshakes
+            Portfolio Demo · Burgers · Thickshakes
           </motion.span>
 
           {/* stylized wordmark */}
           <motion.div variants={rise} className="mt-7">
-            <div className="flex select-none justify-center gap-[0.02em] lg:justify-start">
+            <div className="flex select-none flex-wrap items-end justify-center gap-[0.02em] lg:justify-start">
               {letters.map((ch, i) => (
                 <motion.span
                   key={`${ch}-${i}`}
                   initial={{ opacity: 0, y: 36, rotate: -6 }}
                   animate={{ opacity: 1, y: 0, rotate: 0 }}
                   transition={{ duration: 1, ease: EASE, delay: 0.25 + i * 0.055 }}
-                  className={`font-display text-[15vw] leading-[0.8] sm:text-7xl lg:text-[6.4rem] ${
+                   className={`font-display text-[10vw] leading-[0.8] sm:text-6xl lg:text-[4.7rem] ${
                     i % 2 === 0 ? "text-gradient-crimson" : "text-outline-crimson"
                   }`}
                 >
                   {ch}
                 </motion.span>
               ))}
+              <span className="ml-2 rounded-sm bg-primary px-2 py-1 font-sans text-[10px] font-bold uppercase leading-none text-primary-foreground sm:mb-1">
+                Demo
+              </span>
             </div>
           </motion.div>
 
@@ -99,8 +102,8 @@ export function Hero() {
             variants={rise}
             className="mx-auto mt-5 max-w-md text-base leading-relaxed text-muted-foreground lg:mx-0"
           >
-            Craft burgers, hand-pressed fries and outrageously thick shakes — served fresh in the
-            heart of Kalol.
+            A fictional burger joint serving craft burgers, hand-pressed fries and outrageously
+            thick shakes — created as a portfolio demo.
           </motion.p>
 
           <motion.div
@@ -108,9 +111,7 @@ export function Hero() {
             className="mt-9 flex flex-wrap items-center justify-center gap-3 lg:justify-start"
           >
             <Button size="lg" variant="hero" asChild>
-              <a href="https://www.zomato.com" target="_blank" rel="noreferrer">
-                Order Online
-              </a>
+              <a href="#menu">Explore Menu</a>
             </Button>
             <Button size="lg" variant="outline" asChild className="glass-panel rounded-full">
               <a href="#menu">View Menu</a>
@@ -122,7 +123,7 @@ export function Hero() {
             className="mt-10 flex items-center justify-center gap-8 lg:justify-start"
           >
             {[
-              { k: "4.8★", v: "Google rating" },
+              { k: "4.8★", v: "Demo rating" },
               { k: "30+", v: "Shake flavours" },
               { k: "11am–11pm", v: "Open daily" },
             ].map((s) => (

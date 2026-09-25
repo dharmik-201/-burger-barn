@@ -78,16 +78,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Thicksip Cafe — Kalol" },
+      { title: "Burger Barn — Demo" },
       {
         name: "description",
-        content: "Craft burgers, hand-pressed fries and bold thick shakes in Kalol, Gujarat.",
+        content: "A fictional restaurant website created as a portfolio demonstration.",
       },
-      { name: "author", content: "Thicksip Cafe" },
-      { property: "og:title", content: "Thicksip Cafe — Kalol" },
+      { name: "robots", content: "noindex, nofollow" },
+      { name: "author", content: "Portfolio Demo" },
+      { property: "og:title", content: "Burger Barn — Demo" },
       {
         property: "og:description",
-        content: "Craft burgers, hand-pressed fries and bold thick shakes in Kalol, Gujarat.",
+        content: "A fictional restaurant website created as a portfolio demonstration.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

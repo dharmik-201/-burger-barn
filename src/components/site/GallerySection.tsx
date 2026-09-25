@@ -1,39 +1,23 @@
-import { useQuery } from "@tanstack/react-query";
 import { motion } from "motion/react";
-import { fetchGalleryImages } from "@/lib/gallery";
 import { SectionHeading } from "./SectionHeading";
-import {
-  unnamed_3_webp as storefront,
-  unnamed_4_webp as interiorA,
-  interior_seating_jpg as interiorB,
-  guests_coldcoffee_jpg as guests,
-  guests_family_jpg as guests2,
-  unnamed_5_webp as counter,
-} from "@/lib/assets";
+import burgerUrl from "@/assets/demo-burger.jpg";
+import shakeFriesUrl from "@/assets/demo-shake-fries.jpg";
+import restaurantUrl from "@/assets/demo-restaurant.jpg";
+import counterUrl from "@/assets/demo-counter.jpg";
 
-const fallback = [
-  { url: storefront, caption: "The Thicksip storefront, lit up after dark" },
-  { url: interiorA, caption: "Cosy corner seating" },
-  { url: counter, caption: "Fresh off the counter" },
-  { url: interiorB, caption: "Room for the whole gang" },
-  { url: guests, caption: "Cold coffee o'clock" },
-  { url: guests2, caption: "Good food, better company" },
+const images = [
+  { url: burgerUrl, caption: "The signature demo burger" },
+  { url: restaurantUrl, caption: "A fictional modern diner setting" },
+  { url: shakeFriesUrl, caption: "Chocolate shake and loaded fries" },
+  { url: counterUrl, caption: "A generic fictional service counter" },
+  { url: burgerUrl, caption: "Double smash burger and fries" },
+  { url: shakeFriesUrl, caption: "A classic diner pairing" },
 ];
 
 export function GallerySection() {
-  const { data } = useQuery({
-    queryKey: ["gallery", "gallery"],
-    queryFn: () => fetchGalleryImages("gallery"),
-  });
-
-  const images =
-    data && data.length > 0
-      ? data.map((d) => ({ url: d.displayUrl, caption: d.caption ?? "Thicksip Cafe" }))
-      : fallback;
-
   return (
     <section id="gallery" className="mx-auto max-w-6xl px-5 py-24">
-      <SectionHeading eyebrow="Inside Thicksip" title="Gallery" subtitle="A peek at the space, the plates and the people." />
+      <SectionHeading eyebrow="Inside the Demo" title="Gallery" subtitle="Fictional food and restaurant imagery created for this portfolio project." />
       <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {images.map((img, i) => (
           <motion.figure
@@ -48,6 +32,8 @@ export function GallerySection() {
               src={img.url}
               alt={img.caption}
               loading="lazy"
+              width={1408}
+              height={912}
               className="h-60 w-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <figcaption className="absolute inset-x-0 bottom-0 bg-charcoal/70 px-4 py-2 text-xs uppercase tracking-[0.14em] text-cream">

@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
-import { unnamed_webp as interiorUrl, unnamed_5_webp as counterUrl } from "@/lib/assets";
+import restaurantUrl from "@/assets/demo-restaurant.jpg";
+import counterUrl from "@/assets/demo-counter.jpg";
 
 export function About() {
   return (
@@ -14,9 +15,9 @@ export function About() {
           <span className="text-xs font-semibold uppercase tracking-[0.32em] text-primary">About Us</span>
           <h2 className="mt-3 text-5xl sm:text-6xl">The Ultimate Hangout</h2>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-            Thicksip is the ultimate destination for craft burgers, hand-pressed fries and bold milkshakes. We built a
-            bright, comfortable corner in Kalol where friends stay a little longer — premium plates, pocket-friendly
-            prices, zero pretence.
+            Burger Barn — Demo imagines the ultimate destination for craft burgers, hand-pressed fries and bold
+            milkshakes. It is a fictional, welcoming corner where friends stay a little longer — premium plates,
+            pocket-friendly prices, zero pretence.
           </p>
           <div className="mt-8 grid grid-cols-3 gap-4">
             {[
@@ -40,15 +41,19 @@ export function About() {
           className="grid grid-cols-2 gap-4"
         >
           <img
-            src={interiorUrl}
-            alt="Thicksip Cafe seating area with blue walls and cane chairs"
+            src={restaurantUrl}
+            alt="Fictional Burger Barn restaurant interior with red booths"
             loading="lazy"
+            width={1408}
+            height={912}
             className="col-span-2 h-56 w-full rounded-2xl object-cover shadow-[var(--shadow-soft)]"
           />
           <img
             src={counterUrl}
-            alt="Thicksip Cafe order counter"
+            alt="Fictional Burger Barn service counter"
             loading="lazy"
+            width={1408}
+            height={912}
             className="h-44 w-full rounded-2xl object-cover shadow-[var(--shadow-soft)]"
           />
           <div className="grid h-44 place-items-center rounded-2xl bg-primary p-5 text-center text-primary-foreground shadow-[var(--shadow-bold)]">

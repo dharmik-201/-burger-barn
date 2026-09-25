@@ -13,8 +13,9 @@ export function SiteNav() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
-        <Link to="/" className="font-display text-3xl leading-none text-primary">
-          Thicksip
+        <Link to="/" className="flex items-center gap-2 font-display text-3xl leading-none text-primary">
+          Burger Barn
+          <span className="font-sans text-[9px] font-bold uppercase text-muted-foreground">Demo</span>
         </Link>
         <div className="hidden items-center gap-7 md:flex">
           {links.map((l) => (
@@ -28,9 +29,7 @@ export function SiteNav() {
           ))}
         </div>
         <Button size="sm" variant="hero" asChild>
-          <a href="https://www.zomato.com" target="_blank" rel="noreferrer">
-            Order
-          </a>
+          <a href="#menu">Menu</a>
         </Button>
       </nav>
     </header>
